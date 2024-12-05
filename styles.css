@@ -19,10 +19,8 @@ body {
   display: none;
 }
 
+/* Basic button styling */
 button {
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 15px 30px;
   font-size: 18px;
   background-color: #007bff;
@@ -30,23 +28,45 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block; /* Makes the button behave as inline block */
+  margin-top: 20px; /* Adds space above the button */
+  text-align: center; /* Centers the text inside the button */
 }
 
-button:hover, #next-btn:hover, #restart-btn:hover {
+button:hover {
   background-color: #eb34ae;
 }
+.question-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;    /* Center the content */
+  margin-top: 30px;       /* Add some spacing above the answer container */
+}
 
+/* Adjust the answer container to be below the question */
+.answer-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;    /* Center the buttons horizontally */
+  margin-top: 20px;       /* Add space between the question and answer buttons */
+}
+
+/* Additional styling for buttons inside the answer container */
 .answer-btn {
-  padding: 15px 30px;
-  font-size: 1.5rem;
+  padding: 8px 15px;      /* Smaller padding */
+  font-size: 1.2rem;      /* Reduce font size */
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 20px;
-  width: 200px;
+  margin: 10px 0;         /* Space between buttons */
+  min-width: 120px;       /* Keep button width fixed */
   text-align: center;
+}
+
+.answer-container .answer-btn:hover {
+  background-color: #eb34ae;
 }
 
 .header h1 {
@@ -82,6 +102,7 @@ p {
   position: relative;
   display: inline-block;
   white-space: nowrap;
+  margin: auto;
 }
 
 .content h2 {
@@ -194,30 +215,41 @@ p {
   background-color: #007bff; 
 }
 
-#restart-btn {
-  position: fixed; 
-  bottom: 10px;
-  left: 100px; 
+#restart-btn, #next-btn {
+  position: fixed;
+  bottom: 50px; /* Keep the buttons 50px from the bottom */
   padding: 15px 30px;
   font-size: 18px;
-  background-color: #2fb054;
+  border-radius: 5px;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  width: 200px; /* Same width for both buttons */
+  text-align: center; /* Center the text inside the button */
+}
+
+#restart-btn {
+  left: 10px; /* Position restart button on the left */
+  background-color: #2fb054;
 }
 
 #next-btn {
-  position: fixed;
-  padding: 15px 30px;
-  font-size: 18px;
+  right: 10px; /* Position next button on the right */
   background-color: hsl(23, 64%, 50%);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  bottom: 10px;
-  padding: 15px 30px;
-  font-size: 18px;
 }
 
+
+footer {
+  position: fixed; /* Keeps the footer at the bottom */
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #03045e; /* Optional: background color for footer */
+  padding: 20px 0; /* Padding inside the footer */
+  color: white;
+}
+
+footer button {
+  display: block; /* Ensures the button is a block-level element inside footer */
+  margin: 0 auto; /* Centers the button horizontally */
+}
