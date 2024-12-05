@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Introduction Section -->
+    <div id="introduction">
+      <section class="header">
+        <h1>Quiz</h1>
+        <h2>How well do you know your physics? 🤔</h2>
+      </section>
+
+      <section>
+        <div class="content">
+          <h2>Does it float?</h2>
+          <h2>Does it float?</h2>
+          <div class="content">
+            <div class="sinking-container">
+              <h1 class="sinking-text">Or sink...</h1>
+            </div>
+          </div>
+        </div>
+        <button id="first-button" type="button" onclick="startQuiz()">
+          Test Your Knowledge
+        </button>
+      </section>
+    </div>
+
+    <!-- Quiz Section (Initially hidden) -->
+
+    <div class="container" id="quizContainer" style="display: none">
+      <div class="quiz-progress" id="quizProgress"></div>
+      <div class="question-container" id="questionContainer"></div>
+      <div class="answer-btn"></div>
+      <div class="answer-container" id="answerContainer"></div>
+      <button class="answer-btn"></button>
+      <button id="next-btn" class="btn-hidden">Next</button>
+      <button id="restart-btn" class="btn-hidden" onclick="startQuiz()">Restart</button>
+    </div>
+    <div id="feedbackContainer"></div>
+
+    <!-- Result Section (Initially hidden) -->
+    <div class="container hidden" id="resultContainer" style="display: none">
+      <h2>Quiz Results</h2>
+      <p id="score"></p>
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>
