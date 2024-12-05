@@ -39,29 +39,29 @@ button:hover {
 .question-container {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
-  align-items: center;    /* Center the content */
-  margin-top: 30px;       /* Add some spacing above the answer container */
+  align-items: center; /* Center the content */
+  margin-top: 30px; /* Add some spacing above the answer container */
 }
 
 /* Adjust the answer container to be below the question */
 .answer-container {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
-  align-items: center;    /* Center the buttons horizontally */
-  margin-top: 20px;       /* Add space between the question and answer buttons */
+  align-items: center; /* Center the buttons horizontally */
+  margin-top: 20px; /* Add space between the question and answer buttons */
 }
 
 /* Additional styling for buttons inside the answer container */
 .answer-btn {
-  padding: 8px 15px;      /* Smaller padding */
-  font-size: 1.2rem;      /* Reduce font size */
+  padding: 8px 15px; /* Smaller padding */
+  font-size: 1.2rem; /* Reduce font size */
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px 0;         /* Space between buttons */
-  min-width: 120px;       /* Keep button width fixed */
+  margin: 10px 0; /* Space between buttons */
+  min-width: 120px; /* Keep button width fixed */
   text-align: center;
 }
 
@@ -78,7 +78,7 @@ p {
   font-size: 3rem;
   margin: 80px;
   text-align: center;
-  color: #0077b6;
+  color: #eb34ae;
 }
 .header {
   display: flex;
@@ -178,29 +178,29 @@ p {
 }
 
 #feedbackContainer {
-  text-align: right;
+  text-align: left;
   font-size: 2rem;
   margin-top: 20px;
 }
 .answer-container {
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   gap: 20px;
-  margin-top: 20px; 
+  margin-top: 20px;
   min-height: 150px;
 }
 
 .quiz-progress {
   display: flex;
   justify-content: center;
-  margin-top: 20px; 
-  padding: 10px 0; 
+  margin-top: 20px;
+  padding: 10px 0;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; 
-  z-index: 1000; 
+  width: 100%;
+  z-index: 1000;
 }
 
 .quiz-progress span {
@@ -208,14 +208,15 @@ p {
   height: 20px;
   background-color: #ccc;
   border-radius: 50%;
-  margin: 0 5px; 
+  margin: 0 5px;
 }
 
 .quiz-progress span.seen {
-  background-color: #007bff; 
+  background-color: #007bff;
 }
 
-#restart-btn, #next-btn {
+#restart-btn,
+#next-btn {
   position: fixed;
   bottom: 50px; /* Keep the buttons 50px from the bottom */
   padding: 15px 30px;
@@ -237,7 +238,6 @@ p {
   right: 10px; /* Position next button on the right */
   background-color: hsl(23, 64%, 50%);
 }
-
 
 footer {
   position: fixed; /* Keeps the footer at the bottom */
