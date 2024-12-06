@@ -253,3 +253,19 @@ footer button {
   display: block; /* Ensures the button is a block-level element inside footer */
   margin: 0 auto; /* Centers the button horizontally */
 }
+.restart-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #2fb054;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; /* Center the button horizontally */
+  text-align: center;
+}
+
+.restart-button:hover {
+  background-color: #1e8c3f;
+}

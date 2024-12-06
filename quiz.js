@@ -114,3 +114,22 @@ function hideFooterButton() {
   const footerButton = document.getElementById("first-button");
   footerButton.style.display = "none"; // Hide the button
 }
+
+function restartQuiz() {
+  // Ensure the results container is hidden
+  resultContainer.style.display = "none";
+
+  // Ensure the quiz container is visible
+  quizContainer.style.display = "flex";
+
+  // Reset feedback, progress, and state
+  feedbackContainer.innerHTML = ""; // Clear feedback
+  quizProgress.innerHTML = ""; // Clear progress bar
+
+  // Reset question index and score
+  currentQuestionIndex = 0;
+  score = 0;
+
+  // Start the quiz again
+  handleQuestion(currentQuestionIndex);
+}
